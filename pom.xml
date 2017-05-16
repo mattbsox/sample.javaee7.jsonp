@@ -7,7 +7,7 @@
         <artifactId>java7-parent</artifactId>
         <version>1.4</version>
     </parent>
-    
+
     <groupId>net.wasdev.wlp.sample.javaee7</groupId>
     <artifactId>sample.javaee7.jsonp</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -55,40 +55,40 @@
                     <looseApplication>true</looseApplication>
                     <stripVersion>true</stripVersion>
                     <bootstrapProperties>
-                    	<appLocation>${project.artifactId}.war</appLocation>
+                        <appLocation>${project.artifactId}.war</appLocation>
                     </bootstrapProperties>
                 </configuration>
                 <executions>
-	                <execution>
-	                    <id>stop-server-before-clean</id>
-	                    <phase>pre-clean</phase>
-	                    <goals>
-	                        <goal>stop-server</goal>
-	                    </goals>
-	                </execution>
-	                <execution>
-	                    <id>create-server</id>
-	                    <phase>prepare-package</phase>
-	                    <goals>
-	                        <goal>install-server</goal>
-	                        <goal>create-server</goal>
-	                    </goals>
-	                </execution>
-	                <execution>
-	                    <id>install-apps</id>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>install-apps</goal>
-	                    </goals>
-	                </execution>
-	                <execution>
-	                    <id>package-server</id>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>package-server</goal>
-	                    </goals>
-	                </execution>
-            	</executions>
+                    <execution>
+                        <id>stop-server-before-clean</id>
+                        <phase>pre-clean</phase>
+                        <goals>
+                            <goal>stop-server</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-server</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>install-server</goal>
+                            <goal>create-server</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>install-apps</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>install-apps</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>package-server</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package-server</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
